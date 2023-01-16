@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Raleway:wght@300&display=swap");
+
+:root {
+  --font1: 'Heebo', sans-serif;
+  --font2: 'Raleway', sans-serif;
+  --color1: #247BA0;
+  --color2: #C3B299;
+  --color3: #CBD4C2;
+  --white: #FFFCFF;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font2);
+}
+
+h2 {
+  font-family: var(--font1);
+}

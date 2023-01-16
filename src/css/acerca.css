@@ -1,0 +1,19 @@
+@import url(base.css);
+
+.img-string {
+    transition: 1s all;
+}
+
+.img-string:hover {
+    transform: scale(1.05);
+    filter: blur(.1rem);
+}
+
+.dif {
+    font-family: var(--font2);
+    transition: 1s all;
+}
+
+.dif:hover {
+    transform: translateX(4px);
+}

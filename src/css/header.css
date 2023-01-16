@@ -1,0 +1,21 @@
+@import url(base.css);
+
+header {
+    background: no-repeat center / cover url("images/bg.svg");
+}
+
+a {
+    font-family: var(--font2);
+    width: max-content;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 90%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    letter-spacing: .1rem;
+}
+
+a:hover, a:focus {
+    background-size: 100% 2px;
+}

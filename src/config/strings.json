@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Monofilamento",
+        "description": ["Mayor durabilidad", "Mayor dureza", "Mayor pérdida de tensión"],
+        "image": "images/monofilamento.png"
+    },
+    {
+        "title": "Multifilamento",
+        "description": ["Excelente potencia", "Mejor control de efectos", "Mayor sensación al impactar"],
+        "image": "images/multifilamento.png"
+    },
+    {
+        "title": "Tripa Natural",
+        "description": ["Excelente potencia, sensibilidad y control", "Menor pérdida de tensión", "Mayor comodidad al impactar"],
+        "image": "images/tripa-natural.png"
+    },
+    {
+        "title": "Híbrido",
+        "description": ["Multifilamento en las horizontales para obtener mayor velocidad y comodidad", "Monofilamento para las verticales brindando mayor control, top-spin y durabilidad"],
+        "image": "images/hibrido.png"
+    }
+]

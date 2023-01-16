@@ -1,0 +1,82 @@
+<section id="contact" class="mt-10">
+    <div class="container m-auto flex flex-col justify-center items-center">
+        <form class="w-3/4 px-20 py-28 border-2 rounded-xl">
+            <h2 class="text-3xl pb-10 text-center font-extrabold">Contacto</h2>
+            <div class="relative">
+                <input type="text" id="nombre" class="input w-full" required />
+                <span class="absolute place w-full">Ingresa tu nombre</span>
+            </div>
+            <div class="relative mt-6">
+                <input type="text" id="mensaje" class="input w-full" required />
+                <span class="absolute place w-full">Ingresa tu mensaje</span>
+            </div>
+            <a href="#" type="submit" id="submit" class="text-center font-bold rounded-md mt-4 w-full px-8 py-2 btn-enviar">Enviar</a>
+        </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+
+<style>
+    .input {
+        background: transparent;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: 1px solid black;
+    }
+
+    .place {
+        width: 100%;
+        left: 0;
+        font-size: 16px;
+        z-index: -1;
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: all .5s;
+    }
+
+    .top {
+        width: fit-content;
+        top: -14px;
+        left: 6px;
+        font-size: 14px;
+        z-index: 1;
+        background: #fff;
+        transition: all .5s;
+    }
+
+    .btn-enviar {
+        background-color: #247BA0;
+        color: white;
+    }
+
+    .btn-enviar:hover {
+        background-color: #1d6786;
+    }
+</style>
+
+<script>
+    const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('.input')
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.nextElementSibling!.classList.remove('place')
+            input.nextElementSibling!.classList.add('top')
+        })
+            input.addEventListener('blur', () => {
+                if (input.value == "") {
+                    input.nextElementSibling!.classList.remove('top')
+                    input.nextElementSibling!.classList.add('place')
+                }
+            })
+    })
+
+    const nombre: HTMLInputElement = document.getElementById('nombre') as HTMLInputElement
+    const mensaje: HTMLInputElement = document.getElementById('mensaje') as HTMLInputElement
+    const submitButton: HTMLAnchorElement = document.getElementById('submit') as HTMLAnchorElement
+    submitButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        const name = nombre.value
+        const message = mensaje.value
+        const link = "mailto:cztennisstrings@gmail.com?subject=" + name + "&body=" + message
+        submitButton.href = link
+    })
+</script>
